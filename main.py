@@ -1,9 +1,9 @@
-import matplotlib.pyplot as plt
-import numpy as np
-from tabulate import tabulate
+import matplotlib.pyplot as plt #library for creating static and interactive visualisation such as graphs
+import numpy as np #to perform mathematical operations on arrays
+from tabulate import tabulate #to create tables
 print("Hello, This is InvestiMate. Will help you get an idea of how much of your salary you can invest in certain fields.")
 name= input("May I know your good name?\n")
-name=name.capitalize()
+name=name.capitalize() #capitalising the given input 
 print("-----------------------------------------------------------------------------------------------")
 
 print(f"Welcome,{name}!")
@@ -19,6 +19,7 @@ ans=input()
 ans=ans.upper()
 #print("-----------------------------------------------------------------------------------------------")
 n=0
+#creating a loop for risk acceptance
 while n < 5:
     if ans=="N":
         print("Thanks for your answer!")
@@ -31,7 +32,7 @@ while n < 5:
     ans=ans.upper()
     print("-----------------------------------------------------------------------------------------------")
 salary=input("What is your current salary? Please provide your answer in figures without punctuation.\n")
-salary1=salary.isnumeric()
+salary1=salary.isnumeric() #function to check if the input is all figures
 #print("-----------------------------------------------------------------------------------------------")
 if not salary1:
    print("Invalid Input. Please re-enter")
@@ -121,7 +122,7 @@ elif risk_acceptance_level=="HIGH":
     #myexplode = [0.2, 0, 0, 0]
 
     plt.pie(y, labels=mylabels,autopct=lambda p: '{:.0f}'.format(p * total / 100), shadow=False)
-    plt.show()
+    plt.show() #pie chart visuals
 else:
     print("The given input is invalid. PLease try again.")
 
